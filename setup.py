@@ -78,8 +78,8 @@ if os.path.exists('MANIFEST'):
 # Its presence/absence is used in subclassing setup in numpy/distutils/core.py.
 # However, we need to run the distutils version of sdist, so import that first
 # so that it is in sys.modules
-import numpy.distutils.command.sdist
 import setuptools
+import numpy.distutils.command.sdist
 if int(setuptools.__version__.split('.')[0]) >= 60:
     # setuptools >= 60 switches to vendored distutils by default; this
     # may break the numpy build, so make sure the stdlib version is used
